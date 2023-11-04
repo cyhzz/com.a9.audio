@@ -5,25 +5,26 @@ using System.Collections.Generic;
 using UnityEditorInternal;
 using System;
 
-namespace Com.A9.AudioManager{
-public static class AudioManagerShortCut
+namespace Com.A9.AudioManager
 {
-#if UNITY_EDITOR
-    [MenuItem("My Commands/Special Command_AbsorbAudio _%a")]
-    static void SpecialCommand_AbsorbAudio()
+    public static class AudioManagerShortCut
     {
-        if (Application.isPlaying)
-            return;
-        AudioConfig config = Resources.Load<AudioConfig>("AudioConfig/AudioConfig");
+#if UNITY_EDITOR
+        [MenuItem("My Commands/Special Command_AbsorbAudio _%a")]
+        static void SpecialCommand_AbsorbAudio()
+        {
+            if (Application.isPlaying)
+                return;
+            AudioConfig config = Resources.Load<AudioConfig>("Audio/AudioConfig");
 
-        EditorUtility.FocusProjectWindow();
-        Selection.activeObject = config;
-        AudioConfigEditor.Absorb();
+            EditorUtility.FocusProjectWindow();
+            Selection.activeObject = config;
+            AudioConfigEditor.Absorb();
 
-        //AudioClip default_cp = (AudioClip)AssetDatabase.LoadAssetAtPath("Assets/Extension/Audio/Music/button.mp3", typeof(AudioClip));
-        ////Selection.activeObject = default_cp;
-        //EditorUtility.FocusProjectWindow();
-    }
+            //AudioClip default_cp = (AudioClip)AssetDatabase.LoadAssetAtPath("Assets/Extension/Audio/Music/button.mp3", typeof(AudioClip));
+            ////Selection.activeObject = default_cp;
+            //EditorUtility.FocusProjectWindow();
+        }
 #endif
-}
+    }
 }

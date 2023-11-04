@@ -1,0 +1,16 @@
+{
+    "name": "Com.A9.AudioManager.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f7f8d7cbd618c4fcf920d7d64c74ee6b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

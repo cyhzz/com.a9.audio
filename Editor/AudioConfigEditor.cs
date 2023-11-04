@@ -36,9 +36,8 @@ namespace Com.A9.AudioManager
                 FileInfo[] info = new DirectoryInfo(c).GetFiles("*.*");
                 foreach (FileInfo f in info)
                 {
-                    // input.Substring(input.IndexOf('.') + 1);
-                    // Debug.Log(f.FullName.Substring(f.FullName.IndexOf("\\Assets")+1));
-                    AudioClip cp = AssetDatabase.LoadAssetAtPath<AudioClip>(f.FullName.Substring(f.FullName.IndexOf("\\Assets") + 1));
+                    //Windows might change /Assets to \\Assets
+                    AudioClip cp = AssetDatabase.LoadAssetAtPath<AudioClip>(f.FullName.Substring(f.FullName.IndexOf("/Assets") + 1));
                     if (cp)
                         cps.Add(cp);
                 }

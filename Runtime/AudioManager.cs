@@ -42,8 +42,8 @@ namespace Com.A9.AudioManager
         static AudioManager()
         {
             //Load Config
-            AudioConfig config = Resources.Load<AudioConfig>("AudioConfig/AudioConfig");
-            sourceInstance = Resources.Load<GameObject>("AudioConfig/AudioInstance");
+            AudioConfig config = Resources.Load<AudioConfig>("Audio/AudioConfig");
+            sourceInstance = Resources.Load<GameObject>("Audio/AudioInstance");
             //Debug.Log(config.infos.Count);
 
             for (int i = 0; i < config.infos.Count; i++)

@@ -56,6 +56,7 @@ namespace Com.A9.AudioManager
                 source.volume = 1 - (i / time);
                 yield return null;
             }
+            StopC=null;
             Stop();
         }
 

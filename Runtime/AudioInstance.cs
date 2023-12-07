@@ -78,7 +78,7 @@ namespace Com.A9.AudioManager
         }
         public bool IsPlaying()
         {
-            return source.isPlaying;
+            return source.isPlaying && StopC==null;
         }
         public AudioClip GetClip()
         {

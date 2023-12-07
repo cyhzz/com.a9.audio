@@ -33,6 +33,11 @@ namespace Com.A9.AudioManager
             source.Play();
             notPlayedCounter = 0;
             source.volume = 1.0f;
+            if (StopC!=null)
+            {
+                StopCoroutine(StopC);
+                StopC=null;
+            }
         }
         //Called By AudioManager
         public void Stop()
